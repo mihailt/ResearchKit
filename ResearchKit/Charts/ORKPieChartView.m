@@ -256,6 +256,30 @@ static const CGFloat PieToLegendPadding = 8.0;
     return _titleTextView.textLabel.textColor;
 }
 
+- (void)setTitleFont:(UIFont *)titleFont {
+    if (!titleFont) {
+        titleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    }
+    _titleTextView.titleLabel.font = titleFont;
+    _titleTextView.noDataLabel.font = titleFont;
+}
+
+- (UIFont *)titleFont {
+    return _titleTextView.titleLabel.font;
+}
+
+- (void)setTextFont:(UIFont *)textFont {
+    if (!textFont) {
+        textFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    }
+    _titleTextView.textLabel.font = textFont;
+}
+
+- (UIFont *)textFont {
+    return _titleTextView.textLabel.font;
+}
+
+
 - (void)setShowsTitleAboveChart:(BOOL)showsTitleAboveChart {
     _showsTitleAboveChart = showsTitleAboveChart;
     [self setNeedsUpdateConstraints];

@@ -216,6 +216,10 @@ IB_DESIGNABLE
  */
 @property (nonatomic) CGFloat radiusScaleFactor;
 
+///// CUSTOM FONT SUPPORT /////
+@property (nonatomic, strong, null_resettable) IBInspectable UIFont *titleFont;
+@property (nonatomic, strong, null_resettable) IBInspectable UIFont *textFont;
+
 @end
 
 NS_ASSUME_NONNULL_END
